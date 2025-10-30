@@ -1,0 +1,199 @@
+:root{
+/* Color */
+--cyan-600:hsl(192, 37%, 48%);
+--cyan-300:hsl(192, 90%, 77%);
+--purple-600:hsl(268, 34%, 53%);
+--purple-300:hsl(268, 100%, 86%);
+--slate-900:hsl(240, 21%, 20%);
+--slate-600:hsl(240, 10%, 57%);
+--slate-300:hsl(240, 18%, 85%);
+--white:hsl(0, 0%, 98%);
+
+/* Typography */
+--ff-base: "Red Hat Display", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  /* Text presets from style guide */
+  /* 1. Büyük hero başlık */
+  --fs-hero: 64px;
+  --lh-hero: 1.1;
+  --ls-hero: 0;
+
+  /* 2. İkincil başlık (section title) */
+  --fs-h2: 40px;
+  --lh-h2: 1.1;
+  --ls-h2: 0;
+
+  /* 3. Eyebrow / overline (mavi olan) */
+  --fs-overline: 16px;   /* istersen 14px yapabilirsin */
+  --lh-overline: 1.1;
+  --ls-overline: 4px;
+  --tt-overline: uppercase;
+
+  /* 4. Medium gövde (18px) */
+  --fs-body-lg: 18px;
+  --lh-body-lg: 1.1;   /* tasarımda 110% yazıyor */
+  --ls-body-lg: 0;
+
+  /* 5. Normal body (16px, 150%) */
+  --fs-body: 16px;
+  --lh-body: 1.5;
+  --ls-body: 0;
+--fw-black: 900;
+  --fw-bold: 700;
+  --fw-medium: 500;
+  --fw-regular: 400;
+
+/* Spacing */
+/* 1400 → 112px */
+  --space-1400: clamp(
+    72px,
+    calc(72px + (112 - 72) * ((100vw - 375px) / (1140 - 375))),
+    112px
+  );
+
+  /* 1000 → 80px */
+  --space-1000: clamp(
+    56px,
+    calc(56px + (80 - 56) * ((100vw - 375px) / (1140 - 375))),
+    80px
+  );
+
+  /* 900 → 72px */
+  --space-900: clamp(
+    48px,
+    calc(48px + (72 - 48) * ((100vw - 375px) / (1140 - 375))),
+    72px
+  );
+
+  /* 800 → 64px */
+  --space-800: clamp(
+    44px,
+    calc(44px + (64 - 44) * ((100vw - 375px) / (1140 - 375))),
+    64px
+  );
+
+  /* 700 → 56px */
+  --space-700: clamp(
+    40px,
+    calc(40px + (56 - 40) * ((100vw - 375px) / (1140 - 375))),
+    56px
+  );
+
+  /* 500 → 40px */
+  --space-500: clamp(
+    28px,
+    calc(28px + (40 - 28) * ((100vw - 375px) / (1140 - 375))),
+    40px
+  );
+
+  /* 400 → 32px */
+  --space-400: clamp(
+    24px,
+    calc(24px + (32 - 24) * ((100vw - 375px) / (1140 - 375))),
+    32px
+  );
+
+  /* 300 → 24px */
+  --space-300: clamp(
+    18px,
+    calc(18px + (24 - 18) * ((100vw - 375px) / (1140 - 375))),
+    24px
+  );
+
+  /* 200 → 16px */
+  --space-200: clamp(
+    12px,
+    calc(12px + (16 - 12) * ((100vw - 375px) / (1140 - 375))),
+    16px
+  );
+
+  /* 100 → 8px */
+  --space-100: clamp(
+    6px,
+    calc(6px + (8 - 6) * ((100vw - 375px) / (1140 - 375))),
+    8px
+  );
+
+  /* 50 → 4px */
+  --space-50: clamp(
+    3px,
+    calc(3px + (4 - 3) * ((100vw - 375px) / (1140 - 375))),
+    4px
+  );
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    flex-direction: column;
+}
+header{
+display: flex;
+justify-content: center;
+align-items: center;
+padding-top: var(--space-1000);
+}
+main{
+display: flex;
+flex-direction: column;
+}
+.hero{
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: var(--space-800) 0 ;
+}
+
+.text-content{
+    width: 28rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.text-content h1{
+    text-align: center;
+    font-size: var(--fs-hero);
+    line-height: var(--lh-hero);
+    letter-spacing: var(--ls-hero);
+}
+.text-content p{
+    text-align: center;
+    font-size: var(--fs-body-lg);
+    line-height: var(--lh-body-lg);
+    letter-spacing: var(--ls-body-lg);
+}
+.buttons{
+    display: flex;
+    justify-content: space-evenly;
+
+}
+button:nth-child(1){
+    padding: var(--space-200) var(--space-500) ;
+    font-size: var(--fs-body) ;
+    line-height: var(--lh-body);
+    letter-spacing: var(--ls-body);
+    border-radius: 1.8125rem;
+    background-color: var(--cyan-600);
+    color: var(--white);
+    border: 0rem;
+}
+button:nth-child(2){
+    padding: var(--space-200) var(--space-500) ;
+    font-size: var(--fs-body) ;
+    line-height: var(--lh-body);
+    letter-spacing: var(--ls-body);
+    border-radius: 1.8125rem;
+    background-color: var(--purple-600);
+    color: var(--white);
+    border: 0rem;
+}
+.main-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: var(--space-700);
+}
