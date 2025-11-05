@@ -373,8 +373,9 @@ main {
 
 @media (375px <= width <768px) {
   .hero {
+    width: 100%;
     display: grid;
-    grid-template-columns: 200px 200px;
+    grid-template-columns: 1fr 1fr;
     grid-template-areas:
       "hero-left  hero-right"
       "hero_content hero_content";
@@ -387,7 +388,7 @@ main {
     display: flex;
     grid-area: hero_content;
     text-align: center;
-    padding: var(--space-400);
+    padding:1.71875rem;
     margin-inline: auto;
     gap: var(--space-300);
   }
@@ -474,6 +475,8 @@ main {
     color: var(--slate-600);
   }
   .footer-cta {
+    max-width: 100%;
+    margin-inline:auto
     height: auto;
     display: flex;
     flex-direction: column;
