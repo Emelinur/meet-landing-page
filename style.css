@@ -409,7 +409,6 @@ main {
     color: var(--slate-600);
   }
   .hero__actions {
-    padding: ;
     display: flex;
     flex-direction: column;
     gap: var(--space-200);
@@ -476,7 +475,6 @@ main {
   }
   .footer-cta {
     max-width: 100%;
-    margin-inline:auto
     height: auto;
     display: flex;
     flex-direction: column;
